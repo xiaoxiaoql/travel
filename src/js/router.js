@@ -31,6 +31,11 @@
 					url:'/detail',
 					templateUrl:'template/detail.html',
 					controller:'detailctrl'
+				}).state('login',{
+					url:'/login',
+					templateUrl:'template/login.html',
+					controller:'detailctrl'
 				})
+
 			})
 	})()
