@@ -1,0 +1,45 @@
+<div>
+	<ul class="infolist">
+		<li ng-repeat='x in arr'>
+			<img ng-src="{{x.url1}}" alt="">
+			<a href="#"><img ng-src="{{x.url2}}" alt=""></a>
+			<p>{{x.name}}</p>
+		</li>
+	</ul>
+</div>
+<style>
+	.infolist li{
+		/*background: url(./img/list1-2.jpg) no-repeat center 0px;*/
+		height:1.7rem;
+		overflow: hidden;
+		position: relative;
+		width:100%;
+		background-size: cover;
+		margin-bottom:0.07rem;
+	}
+	.infolist li p{
+		font-size:0.16rem;
+		position: absolute;
+		bottom: 0.1rem;
+		color:#fff;
+		width:100%;
+		text-align:center;
+	}
+	.infolist li img{
+		height:1.7rem;
+		width:100%;
+	}
+	.infolist li a{
+		width:60%;
+		position: absolute;
+		top:0;
+		left:50%;
+		height:1.7rem;
+		display:block;
+		margin-left:-30%;
+	}
+	.infolist li a img{
+		height:1.7rem;
+		width:100%;
+	}
+</style>

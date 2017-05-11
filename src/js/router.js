@@ -1,0 +1,36 @@
+//路由模块
+	(function(){
+		var routers=angular.module('routers',[]);
+		routers.config(function($stateProvider,$urlRouterProvider){
+				$urlRouterProvider.when("","/index/page1");
+				$stateProvider.state('index',{
+					url:'/index',
+					templateUrl:'template/index.html',
+					controller:'indexctrl'
+				})
+				.state('index.page1',{
+					url:'/page1',
+					templateUrl:'template/page1.html',
+					controller:'page1ctrl'
+				})
+				.state('index.page2',{
+					url:'/page2',
+					templateUrl:'template/page2.html',
+					controller:'page2ctrl'
+				})
+				.state('index.page3',{
+					url:'/page3',
+					templateUrl:'template/page3.html',
+					controller:'page3ctrl'
+				})
+				.state('index.page4',{
+					url:'/page4',
+					templateUrl:'template/page4.html',
+					controller:'page4ctrl'
+				}).state('detail',{
+					url:'/detail',
+					templateUrl:'template/detail.html',
+					controller:'detailctrl'
+				})
+			})
+	})()
