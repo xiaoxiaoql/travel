@@ -1,0 +1,181 @@
+<div>
+	<div class="adressheader">
+		<span></span><input type="text" placeholder="搜索目的地/景区" class="search_input"><span>筛选</span>
+	</div>
+	<div class="adress">
+		<ul class="selectall">
+			<li>城市</li>
+			<li>景点</li>
+			<li>类型</li>
+		</ul>
+		<div class='cityall'>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="travel">
+		<ul class="list">
+			<li ng-repeat='ad in arr'>
+				<div class="intr">
+					<a href="#"><img ng-src="{{ad.url2}}" alt=""></a>
+					<div class="lvintr">
+						<p>【春节假期】北京往返</p>
+						<p><a href="#">{{ad.discript}}</a></p>
+						<p class="time">{{ad.duration}}</p>
+						<p class="clear"><span class="price"><big>579</big>元起</span><span class="dis">8.4折</span></p>
+					</div>
+					
+				</div>
+			</li>
+		</ul>
+	</div>
+	<style>
+	.adress {
+		position: relative;
+		font-size: 0.16rem;
+		display:none;
+	}
+	.adress .cityall{
+		position:absolute;
+		top:1rem;
+		width:100%;
+		display:flex;
+		background: #dddddd;
+	}
+	.adress .cityall ul{
+		flex:1;
+	}
+	.adress .cityall ul:nth-child(2){
+		background: #e7e7e7;
+	}
+	.adress .cityall ul:nth-child(3){
+		background: #eee;
+	}
+	.adress .cityall ul li{
+		text-align: center;
+		line-height: 0.3rem;
+		height:0.3rem;
+		border-bottom: 1px solid #cfcfcf;
+	}
+		.adressheader{
+			width:100%;
+			height:1.3rem;
+			background:#fa5b60;
+			font-size:0.16rem;
+			line-height: 1.3rem;
+			text-align: center;
+		}
+		.search_input{
+			border: none;
+			background: #fff;
+			height:0.36rem;
+			width:2rem;
+			padding-left:0.8rem;
+			border-radius: 0.18rem;
+			margin:0 0.3rem;
+		}
+		.adressheader span{
+			color:#fff;
+			font-size:0.18rem;
+		}
+		
+		.selectall{
+			display: flex;
+			background: #fff;
+			padding: 0.2rem 0;
+
+		}
+		.selectall li{
+			flex:1;
+			text-align: center;
+			font-size:0.16rem;
+			height:0.6rem;
+			line-height: 0.6rem;
+			border-right: 1px solid #ccc;
+			color:#5d5d5d;
+		}
+		.travel{
+			background: #f8f8f8;
+			font-size: 0.16rem;
+			padding: 0.1rem 0;
+			color:#666;
+			box-sizing: border-box;
+		}
+		.travel .list{
+			/*display: flex;*/
+			width:100%;
+			/*在弹性盒模型内允许换行*/
+			/*flex-wrap: nowrap;*/
+		}
+		.travel .list li{
+			width:50%;
+			padding: 0 0.1rem;
+			display: inline-block;
+			/*flex-wrap: nowrap;*/
+			margin-bottom: 0.1rem;
+			box-sizing: border-box;
+
+			
+		}
+		.travel .list li .intr{
+			width:96%;
+			margin:auto;
+			background: #fff;
+		}
+		.travel .list li img{
+			width:100%;
+			height:1.6rem;
+		}
+		.travel .list li a{
+			color:#666;
+		}
+		.travel .list li p{
+			line-height: 0.24rem
+			
+		}
+		.travel .list li .lvintr{
+			padding: 0.2rem 0.1rem 0.15rem 0.1rem;
+		}
+		
+		.travel .list li .lvintr .price{
+			float: left;
+		}
+		.travel .list li .lvintr .price big{
+			font-size: 0.22rem;
+		}
+		.travel .list li .lvintr .dis{
+			float: right;
+		}
+		.travel .list li .lvintr .time{
+			line-height: 0.32rem;
+			padding-left: 0.23rem;
+		}
+		.travel .list li .lvintr .clear{
+			padding-top: 0.15rem;
+			border-top: 1px solid #ccc;
+		}
+	</style>
+</div>
