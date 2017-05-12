@@ -1,7 +1,7 @@
 //控制器模块
 ;(function(){
 		var controllers=angular.module('controllers',[]);
-		controllers.controller('indexctrl',function($scope){
+		controllers.controller('indexctrl',function($scope,$cookieStore){
 			$scope.page=1;
 			$scope.nav=function(n){
 				$scope.page=n;

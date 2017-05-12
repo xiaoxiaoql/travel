@@ -2,7 +2,7 @@
 	(function(){
 		var routers=angular.module('routers',[]);
 		routers.config(function($stateProvider,$urlRouterProvider){
-				$urlRouterProvider.when("","/index/page1");
+				$urlRouterProvider.when("","/login");
 				$stateProvider.state('index',{
 					url:'/index',
 					templateUrl:'template/index.html',
