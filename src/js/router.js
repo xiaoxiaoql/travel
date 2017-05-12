@@ -34,7 +34,7 @@
 				}).state('login',{
 					url:'/login',
 					templateUrl:'template/login.html',
-					controller:'detailctrl'
+					controller:'loginctr'
 				})
 
 			})

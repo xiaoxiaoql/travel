@@ -27,5 +27,6 @@
 			templateUrl:'./directive/infolist.html'
 		}
 	})
+	
 })()
 ;

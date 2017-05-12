@@ -81,6 +81,28 @@ http.createServer(function(request,response){
 				}
 			});
 		break;
+		case "/login":
+			conn.query("select * from user",function(err,data){
+				if(err){
+					throw err;
+				}else{
+					for(var i=0;i<data.length;i++){
+						console.log(data[i].username==str.username);
+						console.log(data[i].password==str.password);
+						if(data[i].username==str.username&&data[i].password==str.password){
+							var verify={};
+							verify.word=1;
+							verify.datail=data[i];
+							response.end(JSON.stringify(verify))
+						}else{
+							// var verify={};
+							// verify.word=0;
+							// response.end(JSON.stringify(verify))
+						}
+					}
+				}
+			});
+		break;
 	}
 
 }).listen('8899');
